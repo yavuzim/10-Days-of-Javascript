@@ -1,16 +1,15 @@
 function vowelsAndConsonants(s) {
-    let _array=s.split('');
-    
-    let vowel =[], consonant = [];
-    for(let i=0; i<_array.length; i++){
-        _array[i]=='a' || _array[i]=='e' || _array[i]=='i' || _array[i]=='o' || _array[i]=='u' ? vowel.splice(i,0,_array[i]) : consonant.splice(i,0,_array[i])
-    } 
-   let letters = vowel.join("").concat(consonant.join(""))
-    for(let i=0; i<letters.length; i++){
-        console.log(letters[i])
-    }    
+    let vowels = ["a","e","i","o","u"]
+    let getChar=s.split("")
+    let consonants = []
+    getChar.map(e=>{
+       if(vowels.indexOf(e) > -1){
+           console.log(e)
+       }
+       else consonants.push(e)
+    })
+    consonants.map(e=>console.log(e))
 }
-
 
 function main() {
     const s = readLine();
