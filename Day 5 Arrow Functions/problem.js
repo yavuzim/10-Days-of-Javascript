@@ -6,17 +6,16 @@
  */
 
 function modifyArray(nums) {
-    let arrayValues=[]
-    nums.map((e,i)=>{
-        if(e%2==0) arrayValues.push(e*2)
-        else arrayValues.push(e*3)
+    let arr = nums.map(item => {
+        if (item % 2 == 0) return item * 2
+        else return item * 3
     })
-    return arrayValues
+    return arr
 }
 
 function main() {
     const n = +(readLine());
     const a = readLine().split(' ').map(Number);
-    
+
     console.log(modifyArray(a).toString().split(',').join(' '));
 }
